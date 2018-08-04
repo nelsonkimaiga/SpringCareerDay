@@ -22,10 +22,10 @@ public class JobApplicants {
 
         
 //uuid object
-UUID uuid = UUID.randomUUID();
+private UUID uuid = UUID.randomUUID();
         
         // zone date time
-        ZonedDateTime zonedDateTime = ZonedDateTime.now();
+        private ZonedDateTime zonedDateTime = ZonedDateTime.now();
         
     @javax.persistence.Id
         private String id;
@@ -37,86 +37,84 @@ UUID uuid = UUID.randomUUID();
         private int years_of_experience;
         private int date_created;
 
-        public JobApplicants (){
-            super();
-        
-        }
-        
-        public JobApplicants (String id, String first_name, String last_name, char email, int phone, String education_level, int years_of_experience, int date_created){
-            super();
-            this.id = id;
-            this.first_name = first_name;
-            this.last_name = last_name;
-            this.email = email;
-            this.phone = phone;
-            this.education_level = education_level;
-            this.years_of_experience = years_of_experience;
-            this.date_created = date_created;
-        }
-        
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
+    }
+
+    public ZonedDateTime getZonedDateTime() {
+        return zonedDateTime;
+    }
+
+    public void setZonedDateTime(ZonedDateTime zonedDateTime) {
+        this.zonedDateTime = zonedDateTime;
+    }
+
     public String getId() {
-        return uuid.toString();
+        return id;
     }
 
     public void setId(String id) {
         this.id = id;
     }
-    
-    public String getFirstName(){
+
+    public String getFirst_name() {
         return first_name;
     }
-    
-    public void setFirstName(String first_name){
-       this.first_name = first_name;
+
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
-    
-    public String getLastName(){
+
+    public String getLast_name() {
         return last_name;
     }
-    
-    public void setLastName(String last_name){
-       this.last_name = last_name;
+
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
-    
-    public char getEmail(){
+
+    public char getEmail() {
         return email;
     }
-    
-    public void setEmail(char email){
-       this.email = email;
+
+    public void setEmail(char email) {
+        this.email = email;
     }
-    
-    public int getPhone(){
+
+    public int getPhone() {
         return phone;
     }
-    
-    public void setPhone(int phone){
-       this.phone = phone;
+
+    public void setPhone(int phone) {
+        this.phone = phone;
     }
-    
-    public String getEducation(){
+
+    public String getEducation_level() {
         return education_level;
     }
-    
-    public void setEducation(String education_level){
-       this.education_level = education_level;
+
+    public void setEducation_level(String education_level) {
+        this.education_level = education_level;
     }
-    
-    public int getYearsofExperience(){
+
+    public int getYears_of_experience() {
         return years_of_experience;
     }
-    
-    public void setYearsofExperience(int years_of_experience){
-       this.years_of_experience = years_of_experience;
+
+    public void setYears_of_experience(int years_of_experience) {
+        this.years_of_experience = years_of_experience;
     }
-    
-    public int getDateCreated(){
+
+    public int getDate_created() {
         return date_created;
     }
-    
-    public void setDateCreated(int date_created){
-       this.date_created = date_created;
+
+    public void setDate_created(int date_created) {
+        this.date_created = date_created;
     }
-    
-    
+
 }
