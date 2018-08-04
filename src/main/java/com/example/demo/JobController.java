@@ -8,6 +8,8 @@ package com.example.demo;
 import java.time.ZonedDateTime;
 import java.util.UUID;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import org.springframework.data.annotation.Id;
 /**
  *
  * @author Kimaiga
@@ -15,15 +17,15 @@ import javax.persistence.Entity;
 
 
 @Entity
-public class JobMaintainer {
-    //uuid object
-private UUID uuid = UUID.randomUUID();
+public class JobController {
+@Id
+@GeneratedValue
         
         // zone date time
         private ZonedDateTime zonedDateTime = ZonedDateTime.now();
         
         @javax.persistence.Id
-        private String id;
+        private Long id;
         private String name;
         private String description;
         private String type;
@@ -34,12 +36,17 @@ private UUID uuid = UUID.randomUUID();
         private String interview_start_time;
         private String interview_end_time;
 
-    public UUID getUuid() {
-        return uuid;
+        public JobController(){
+            super();
+        }
+        
+        
+    public Long getID() {
+        return id;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setID(Long id) {
+        this.id = id;
     }
 
     public ZonedDateTime getZonedDateTime() {
@@ -50,11 +57,11 @@ private UUID uuid = UUID.randomUUID();
         this.zonedDateTime = zonedDateTime;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

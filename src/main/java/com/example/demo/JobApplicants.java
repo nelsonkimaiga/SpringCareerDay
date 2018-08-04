@@ -18,17 +18,14 @@ import org.springframework.data.annotation.Id;
 
 @Entity
 public class JobApplicants {
-
-
-        
-//uuid object
-private UUID uuid = UUID.randomUUID();
+@Id
+@GeneratedValue
         
         // zone date time
         private ZonedDateTime zonedDateTime = ZonedDateTime.now();
         
     @javax.persistence.Id
-        private String id;
+        private Long id;
         private String first_name;
         private String last_name;
         private char email;
@@ -37,13 +34,9 @@ private UUID uuid = UUID.randomUUID();
         private int years_of_experience;
         private int date_created;
 
-    public UUID getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
+  public JobApplicants(){
+      super();
+  }
 
     public ZonedDateTime getZonedDateTime() {
         return zonedDateTime;
@@ -53,11 +46,11 @@ private UUID uuid = UUID.randomUUID();
         this.zonedDateTime = zonedDateTime;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
